@@ -32,9 +32,9 @@ const Navbar = () => {
           <Link
             key={link.href}
             href={link.href}
-            className={`hover:text-[#48A6A7]  hover:decoration-2 hover:decoration-[#48A6A7] hover:transition-ease-in-out hover:duration-300 
+            className={`hover:text-[#59e1e4]  hover:decoration-2 hover:decoration-[#59e1e4] hover:transition-ease-in-out hover:duration-300 
           ${pathname === link.href
-                ? "text-[#48A6A7] decoration-2 decoration-[#48A6A7]"
+                ? "text-[#59e1e4] decoration-2 decoration-[#59e1e4]"
                 : ""
               }`}
           >
@@ -45,9 +45,9 @@ const Navbar = () => {
 
         <Link
           href="/resume"
-          className="relative ml-10 inline-flex items-center justify-center p-2 px-5 py-2 overflow-hidden font-medium text-[#48A6A7] transition duration-300 ease-out border-2 border-[#48A6A7] rounded-sm shadow-md group"
+          className="relative ml-10 inline-flex items-center justify-center p-2 px-5 py-2 overflow-hidden font-medium text-[#59e1e4] transition duration-300 ease-out border-2 border-[#59e1e4] rounded-sm shadow-md group"
         >
-          <span className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-[#48A6A7] group-hover:translate-x-0 ease">
+          <span className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-[#59e1e4] group-hover:translate-x-0 ease">
             <svg
               className="w-5 h-5 rotate-[90deg] "
               fill="none"
@@ -63,7 +63,7 @@ const Navbar = () => {
               ></path>
             </svg>
           </span>
-          <span className="absolute flex items-center justify-center w-full h-full text-[#48A6A7] transition-all duration-300 transform group-hover:translate-x-full ease">
+          <span className="absolute flex items-center justify-center w-full h-full text-[#59e1e4] transition-all duration-300 transform group-hover:translate-x-full ease">
             Resume
           </span>
           <span className="relative invisible">Resume</span>
