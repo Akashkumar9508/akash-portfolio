@@ -2,6 +2,7 @@
 import React from "react";
 import { ContainerScroll } from "@/components/ui/container-scroll-animation";
 import Image from "next/image";
+import favicon from "@/assets/favicon.ico"
 
 const HeroScrollDemo =()=> {
   return (
@@ -19,7 +20,7 @@ const HeroScrollDemo =()=> {
         }
       >
         <Image
-          src={`/linear.webp`}
+          src={favicon}
           alt="hero"
           height={720}
           width={1000}
