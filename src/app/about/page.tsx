@@ -1,8 +1,11 @@
 import React from 'react'
+import AboutHero from "@/components/about/herosection";
 
 const page = () => {
   return (
-    <div>about page page</div>
+    <div>
+      <AboutHero />
+    </div>
   )
 }
 
