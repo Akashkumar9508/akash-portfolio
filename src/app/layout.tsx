@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import NavbarMobile from "@/components/NavbarMobile";
 import CursorTrailCanvas from "@/components/cursor-trail-canvas";
 import useLenis from '@/hooks/useLenis';
+import favicon from "@/assets/favicon.ico"
 
 const metadata: Metadata = {
   title: "Akash Kumar",
@@ -21,7 +22,8 @@ export default function RootLayout({
 }>) {
   useLenis();
   return (
-    <html lang="en">
+    <html lang="en"> 
+      <link rel="shortcut icon" href={favicon.src} type="image/x-icon" />
       <body className="antialiased overflow-x-hidden bg-black select-none"> 
           <Navbar />
           <NavbarMobile />

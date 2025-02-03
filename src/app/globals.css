@@ -13,6 +13,24 @@
   --foreground: #171717;
 }
 
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background: #59e1e4;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #59e1e4;
+  cursor: pointer;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
