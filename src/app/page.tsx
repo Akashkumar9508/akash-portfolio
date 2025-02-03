@@ -23,7 +23,7 @@ export default function Home() {
       </div>
 
 
-      <div className="mt-40">
+      <div className=" mt-48 sm:mt-40">
         <AboutPage />
       </div>
       
