@@ -4,6 +4,7 @@ import React from "react";
 import Typed from "typed.js";
 import { useEffect, useRef } from "react";
 import FlipWordsDemo from "@/components/utility/FlipWords"
+import AboutPage from "@/app/about/page" 
 
 
 
@@ -19,6 +20,11 @@ export default function Home() {
         <pre className="font-bold"><h1 className="text-[8vw] sm:text-[3vw] sm:text-3xl md:text-6xl">Hi, I&apos;m Akash Kumar</h1> 
         <span className="text-[6vw] sm:text-[2.5vw]" >I'am </span><span className="text-[#59e1e4] text-[6vw] sm:text-[2.5vw] inline " ><FlipWordsDemo /></span></pre>
         <p className="text-[4vw] sm:text-[1.2vw]">I&apos;m a software developer specializing in high-performance, user-centric web applications. Skilled in <span className="text-[#59e1e4]">React.js</span>, <span className="text-[#59e1e4]">Next.js</span>, and modern web technologies, I build seamless, scalable, and efficient solutions across the stack.</p>
+      </div>
+
+
+      <div className="mt-40">
+        <AboutPage />
       </div>
       
       

@@ -1,12 +1,12 @@
 import React from 'react'
 import AboutHero from "@/components/about/herosection";
-import Experience from '@/components/about/Experience';
+import TimelineDemo from "@/components/about/TimeLine"
 
 const page = () => {
   return (
     <div>
       <AboutHero />
-      <Experience />
+      <TimelineDemo />
     </div>
   )
 }

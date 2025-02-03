@@ -11,9 +11,9 @@ const HeroScrollDemo =()=> {
         titleComponent={
           <>
             <h1 className="text-4xl font-semibold text-black dark:text-white">
-              Unleash the power of <br />
-              <span className="text-4xl md:text-[6rem] font-bold mt-1 leading-none">
-                Scroll Animations
+              This is all  <br />
+              <span className="text-4xl md:text-[5rem] font-bold mt-1 leading-none">
+                ABOUT ME
               </span>
             </h1>
           </>
