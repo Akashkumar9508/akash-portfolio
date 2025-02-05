@@ -11,6 +11,7 @@ import GridBackgroundDemo from "@/components/utility/GridBackgroundDemo";
 import AnimatedLogo from "@/components/utility/animated-logo";
 import { Squeeze as Hamburger } from "hamburger-react";
 import { motion } from "framer-motion";
+import ThemeSwitch from "../ui/ThemeSwitch";
 
 const NavbarMobile = () => {
   const [isOpen, setOpen] = useState<boolean>(false);
@@ -100,7 +101,7 @@ const NavbarMobile = () => {
             <SocialMediaLinks />
           </div>
           <p className="absolute bottom-9 text-[3vw] font-light right-24 text-[#59e1e4] flex items-center justify-center">
-            <FaCode className="mr-2" /> Design By Akash
+            <FaCode className="mr-2" /> Design By Akash  <ThemeSwitch />
           </p>
         </div>
       </div>

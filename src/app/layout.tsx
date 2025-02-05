@@ -6,6 +6,8 @@ import NavbarMobile from "@/components/utility/NavbarMobile";
 import CursorTrailCanvas from "@/components/utility/cursor-trail-canvas";
 import useLenis from '@/hooks/useLenis';
 import favicon from "@/assets/favicon.ico"
+import CurrentTime from "@/components/ui/CurrentTime";
+import { Providers } from "@/components/utility/ThemeProvider"
 
 const metadata: Metadata = {
   title: "Akash Kumar",
@@ -22,13 +24,16 @@ export default function RootLayout({
 }>) {
   useLenis();
   return (
-    <html lang="en"> 
+    <html lang="en" suppressHydrationWarning> 
       <link rel="shortcut icon" href={favicon.src} type="image/x-icon" />
-      <body className="antialiased overflow-x-hidden bg-black select-none"> 
+      <body className="antialiased overflow-x-hidden relative bg-white dark:bg-black select-none"> 
+        <Providers>
+        <CurrentTime />
           <Navbar />
           <NavbarMobile />
           <CursorTrailCanvas className="pointer-events-none fixed inset-0 -z-10 h-full w-full md:block" />
           {children}
+        </Providers>
       </body>
     </html>
   );

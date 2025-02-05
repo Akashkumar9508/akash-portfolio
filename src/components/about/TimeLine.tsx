@@ -17,7 +17,7 @@ const TimelineDemo=()=> {
           Completed my All India Senior School Certificate Examination with CBSE Board.
           </p>
           
-          <div className="grid  gap-4 dark:text-gray-400">
+          <div className="grid  gap-4 text-black dark:text-gray-400">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid ea eius deleniti, possimus molestiae labore quidem, repudiandae repellat ab excepturi culpa pariatur sint unde, error magni quasi architecto fugit ipsam quos aliquam totam porro? Nisi rerum incidunt voluptatibus cumque quasi?</p>
           </div>
         </div>
@@ -33,7 +33,7 @@ const TimelineDemo=()=> {
           <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
           Completed my All India Senior School Certificate Examination with CBSE Board.
           </p>
-          <div className="grid  gap-4 dark:text-gray-400">
+          <div className="grid  gap-4 text-black dark:text-gray-400">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid ea eius deleniti, possimus molestiae labore quidem, repudiandae repellat ab excepturi culpa pariatur sint unde, error magni quasi architecto fugit ipsam quos aliquam totam porro? Nisi rerum incidunt voluptatibus cumque quasi?</p>
           </div>
         </div>
@@ -49,7 +49,7 @@ const TimelineDemo=()=> {
             <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
             Completing my Graudation degree with BCA (Bachelor of Computer Applications).
             </p>
-            <div className="grid  gap-4 dark:text-gray-400">
+            <div className="grid  gap-4 text-black dark:text-gray-400">
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid ea eius deleniti, possimus molestiae labore quidem, repudiandae repellat ab excepturi culpa pariatur sint unde, error magni quasi architecto fugit ipsam quos aliquam totam porro? Nisi rerum incidunt voluptatibus cumque quasi?</p>
             </div>
           </div>

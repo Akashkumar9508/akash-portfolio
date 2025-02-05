@@ -21,7 +21,7 @@ const Resume: React.FC = () => {
   }, []);
 
   return (
-    <div className="py-16 px-8 bg-gray-100 dark:bg-transparent">
+    <div className="py-16 px-8 bg-transparent dark:bg-transparent">
       <div className="flex justify-center my-4">
       </div>
       {/* PDF viewer */}
