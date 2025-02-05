@@ -5,10 +5,10 @@ import navLinks from "@/data/navLinks";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { FaArrowRightLong } from "react-icons/fa6";
-import SocialMediaLinks from "@/components/SocialMediaLinks";
+import SocialMediaLinks from "@/components/utility/SocialMediaLinks";
 import { FaCode } from "react-icons/fa";
-import GridBackgroundDemo from "@/components/GridBackgroundDemo";
-import AnimatedLogo from "@/components/animated-logo";
+import GridBackgroundDemo from "@/components/utility/GridBackgroundDemo";
+import AnimatedLogo from "@/components/utility/animated-logo";
 import { Squeeze as Hamburger } from "hamburger-react";
 import { motion } from "framer-motion";
 

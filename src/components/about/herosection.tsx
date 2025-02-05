@@ -1,5 +1,5 @@
 import React from 'react'
-import HeroScrollDemo from "@/components/containerscrollanimation"
+import HeroScrollDemo from "@/components/utility/containerscrollanimation"
 
 const herosection = () => {
   return (

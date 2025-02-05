@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 // import FloatingDockDemo from "./FloatingDockDemo";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import AnimatedLogo from "@/components/animated-logo";
+import AnimatedLogo from "@/components/utility/animated-logo";
 import navLinks from "@/data/navLinks"
 
 const Navbar = () => {
