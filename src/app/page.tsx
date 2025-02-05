@@ -1,5 +1,5 @@
 "use client";
-import SocialMediaLinks from "@/components/SocialMediaLinks";
+import SocialMediaLinks from "@/components/utility/SocialMediaLinks";
 import React from "react";
 import Typed from "typed.js";
 import { useEffect, useRef } from "react";

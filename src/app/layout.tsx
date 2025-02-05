@@ -1,9 +1,9 @@
 "use client";
 import type { Metadata } from "next";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
-import NavbarMobile from "@/components/NavbarMobile";
-import CursorTrailCanvas from "@/components/cursor-trail-canvas";
+import Navbar from "@/components/utility/Navbar";
+import NavbarMobile from "@/components/utility/NavbarMobile";
+import CursorTrailCanvas from "@/components/utility/cursor-trail-canvas";
 import useLenis from '@/hooks/useLenis';
 import favicon from "@/assets/favicon.ico"
 
