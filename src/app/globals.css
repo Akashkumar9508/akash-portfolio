@@ -8,10 +8,6 @@
   font-family: "Ubuntu", serif;
 }
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
 
 ::-webkit-scrollbar {
   width: 2px;
@@ -30,16 +26,25 @@
   background: #59e1e4;
 }
 
-@media (prefers-color-scheme: dark) {
+
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    /* --mainText: #A294F9; */
+    --mainText: #00b9bc;
+    --Background: #f2f9fa;
   }
-}
+  .dark{
+    --mainText: #59e1e4;
+    --Background: #000000;
+  
+  }
+
+
+
+
+
 
 body {
-  color: var(--foreground);
-  background: var(--background);
+  transition: background-color 0.9s ease, color 0.9s ease;
   font-family: Arial, Helvetica, sans-serif;
 }
 

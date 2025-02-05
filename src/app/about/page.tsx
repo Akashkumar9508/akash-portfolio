@@ -5,7 +5,7 @@ import TimelineDemo from "@/components/about/TimeLine"
 const page = () => {
   return (
     <div>
-      <AboutHero />
+      {/* <AboutHero /> */}
       <TimelineDemo />
     
     </div>

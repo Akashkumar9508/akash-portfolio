@@ -3,7 +3,7 @@ import HeroScrollDemo from "@/components/utility/containerscrollanimation"
 
 const herosection = () => {
   return (
-    <div className='h-auto p-0' >
+    <div className='h-auto p-0 mt-40 sm:mt-60' >
         <HeroScrollDemo />
     </div>
   )

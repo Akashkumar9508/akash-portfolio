@@ -13,7 +13,7 @@ import { WobbleCardYoutube } from "@/components/ui/wobble-card-youtube";
 const HeroScrollDemo = () => {
   return (
 
-    <div className="flex flex-col overflow-hidden">
+    <div className="flex flex-col ">
       <ContainerScroll
         titleComponent={
           <>

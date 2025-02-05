@@ -12,7 +12,7 @@ const CurrentTime: React.FC = () => {
     return () => clearInterval(interval);
   }, []);
 
-  return <h1 className="fixed bottom-1 right-1 text-[0.8rem]" >{time}</h1>;
+  return <h1 className="fixed bottom-1 right-1 text-[0.8rem] text-[--mainText] dark:text[--mainText] hover:scale-125 transition-easy-in duration-300" >{time}</h1>;
 };
 
 export default CurrentTime;

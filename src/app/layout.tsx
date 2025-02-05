@@ -26,12 +26,12 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning> 
       <link rel="shortcut icon" href={favicon.src} type="image/x-icon" />
-      <body className="antialiased overflow-x-hidden relative bg-white dark:bg-black select-none"> 
+      <body className="antialiased overflow-x-hidden relative bg-[--Background] dark:bg-[--Background] select-none"> 
         <Providers>
         <CurrentTime />
           <Navbar />
           <NavbarMobile />
-          <CursorTrailCanvas className="pointer-events-none fixed inset-0 -z-10 h-full w-full md:block" />
+          <CursorTrailCanvas className="pointer-events-none fixed inset-0 -z-10 h-full w-full hidden md:block " />
           {children}
         </Providers>
       </body>
