@@ -7,6 +7,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import AnimatedLogo from "@/components/utility/animated-logo";
 import navLinks from "@/data/navLinks"
+import ThemeSwitch from "@/components/ui/ThemeSwitch";
 
 const Navbar = () => {
   const [isOpen, setOpen] = useState<boolean>(false);
@@ -32,7 +33,7 @@ const Navbar = () => {
           <Link
             key={link.href}
             href={link.href}
-            className={`hover:text-[#59e1e4]  hover:decoration-2 hover:decoration-[#59e1e4] hover:transition-ease-in-out hover:duration-300 
+            className={`text-black dark:text-white hover:text-[#59e1e4]  hover:decoration-2 dark:hover:decoration-[#59e1e4] hover:decoration-[#59e1e4] hover:transition-ease-in-out hover:duration-300 
           ${pathname === link.href
                 ? "text-[#59e1e4] decoration-2 decoration-[#59e1e4]"
                 : ""
@@ -47,7 +48,7 @@ const Navbar = () => {
           href="/resume"
           className="relative ml-10 inline-flex items-center justify-center p-2 px-5 py-2 overflow-hidden font-medium text-[#59e1e4] transition duration-300 ease-out border-2 border-[#59e1e4] rounded-sm shadow-md group"
         >
-          <span className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-[#59e1e4] group-hover:translate-x-0 ease">
+          <span className="absolute inset-0 flex items-center justify-center w-full h-full text-black dark:text-white duration-300 -translate-x-full bg-[#59e1e4] group-hover:translate-x-0 ease">
             <svg
               className="w-5 h-5 rotate-[90deg] "
               fill="none"
@@ -68,6 +69,8 @@ const Navbar = () => {
           </span>
           <span className="relative invisible">Resume</span>
         </Link>
+
+        <ThemeSwitch />
       </div>
 
       {/* mobile menu bar  */}
