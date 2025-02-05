@@ -1,6 +1,20 @@
 import { AnimatePresence, Variants, motion } from "framer-motion";
+import { useState , useEffect } from "react";
 
 export default function AnimatedLogo() {
+  const [mainTextColor, setMainTextColor] = useState("#A294F9");
+   useEffect(() => {
+        // Ensure this runs only in the browser
+        if (typeof window !== "undefined") {
+          const rootStyle = getComputedStyle(document.documentElement);
+          const color = rootStyle.getPropertyValue("--mainText").trim();
+          setMainTextColor(color || "#A294F9");
+        }
+    
+  
+    
+    
+      }, [mainTextColor]); 
   const iconVariant: Variants = {
     hidden: {
       pathLength: 0,
@@ -9,7 +23,7 @@ export default function AnimatedLogo() {
     visible: {
       pathLength: 1,
       // Set fill as per your theme
-      fill: "#59e1e4",
+      fill: mainTextColor,
     },
   };
 
@@ -18,7 +32,7 @@ export default function AnimatedLogo() {
       <motion.svg
         viewBox="0 0 450 450"
         xmlns="http://www.w3.org/2000/svg"
-        className="h-full w-full fill-[#48A6A7] stroke-[#48A6A7] "
+        className="h-full w-full fill-[--mainText] dark:fill-[--mainText] stroke-[--mainText] dark:stroke-[--mainText]"
       >
         <motion.path
           d="M321.955 420L179.465 127.143L224.998 36.1755L416.91 420H321.955ZM204.867 263.253L128.055 420H33.0897L158.769 168.608L204.867 263.253Z"

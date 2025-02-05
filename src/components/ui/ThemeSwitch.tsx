@@ -9,7 +9,7 @@ export default function ThemeSwitch() {
   const [mounted, setMounted] = useState(false)
   const { setTheme, resolvedTheme } = useTheme()
 
-  useEffect(() =>  setMounted(true), [])
+  useEffect(() => setMounted(true), [])
 
   if (!mounted) return (
     <Image
@@ -23,12 +23,26 @@ export default function ThemeSwitch() {
     />
   )
 
+  const handleThemeChange = (newTheme: string) => {
+    setTheme(newTheme)
+    window.location.reload()
+  }
+
   if (resolvedTheme === 'dark') {
-    return <FiSun className="dark:text-white text-black text-2xl transition-all duration-300" onClick={() => setTheme('light')} />
+    return (
+      <FiSun 
+        className="dark:text-white text-[--Background] hover:text-[--mainText] hover:dark:text-[--mainText] text-3xl sm:text-2xl transition-all duration-300"
+        onClick={() => handleThemeChange('light')} 
+      />
+    )
   }
 
   if (resolvedTheme === 'light') {
-    return <FiMoon className="dark:text-white text-black text-2xl transition-all duration-300 " onClick={() => setTheme('dark')} />
+    return (
+      <FiMoon 
+        className="text-black dark:text-[--Background] hover:text-[--mainText] hover:dark:text-[--mainText] text-3xl sm:text-2xl transition-all duration-300" 
+        onClick={() => handleThemeChange('dark')} 
+      />
+    )
   }
-
 }

@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { Squeeze as Hamburger } from "hamburger-react";
 import { motion } from "framer-motion";
+
 // import FloatingDockDemo from "./FloatingDockDemo";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -11,7 +12,7 @@ import ThemeSwitch from "@/components/ui/ThemeSwitch";
 
 const Navbar = () => {
   const [isOpen, setOpen] = useState<boolean>(false);
-  const pathname = usePathname(); // Get the current route
+  const pathname = usePathname(); 
 
   return (
     <motion.div
@@ -33,11 +34,11 @@ const Navbar = () => {
           <Link
             key={link.href}
             href={link.href}
-            className={`text-black dark:text-white hover:text-[#59e1e4]  hover:decoration-2 dark:hover:decoration-[#59e1e4] hover:decoration-[#59e1e4] hover:transition-ease-in-out hover:duration-300 
-          ${pathname === link.href
-                ? "text-[#59e1e4] decoration-2 decoration-[#59e1e4]"
-                : ""
-              }`}
+            className={`linkMobileNav relative hover:text-[--mainText] dark:hover:text-[--mainText] hover:decoration-2 hover:decoration-[--mainText]  dark:hover:decoration-[--mainText] hover:transition-ease-in-out hover:duration-300 
+           ${pathname === link.href
+            ? "text-[--mainText] dark:hover:text-[--mainText] decoration-2 decoration-black"
+            : ""
+            }`}
           >
             {link.name}
           </Link>
@@ -46,9 +47,9 @@ const Navbar = () => {
 
         <Link
           href="/resume"
-          className="relative ml-10 inline-flex items-center justify-center p-2 px-5 py-2 overflow-hidden font-medium text-[#59e1e4] transition duration-300 ease-out border-2 border-[#59e1e4] rounded-sm shadow-md group"
+          className="relative ml-10 inline-flex items-center justify-center p-2 px-5 py-2 overflow-hidden font-medium text-[--mainText] dark:text-[--mainText] transition duration-300 ease-out border-2 border-[--mainText] dark:border-[--mainText] rounded-sm shadow-md group"
         >
-          <span className="absolute inset-0 flex items-center justify-center w-full h-full text-black dark:text-white duration-300 -translate-x-full bg-[#59e1e4] group-hover:translate-x-0 ease">
+          <span className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-300 -translate-x-full bg-[--mainText] dark:bg-[--mainText] group-hover:translate-x-0 ease">
             <svg
               className="w-5 h-5 rotate-[90deg] "
               fill="none"
@@ -64,28 +65,13 @@ const Navbar = () => {
               ></path>
             </svg>
           </span>
-          <span className="absolute flex items-center justify-center w-full h-full text-[#59e1e4] transition-all duration-300 transform group-hover:translate-x-full ease">
+          <span className="absolute flex items-center justify-center w-full h-full text-[--mainText] dark:text-[--mainText] transition-all duration-300 transform group-hover:translate-x-full ease">
             Resume
           </span>
           <span className="relative invisible">Resume</span>
         </Link>
 
         <ThemeSwitch />
-      </div>
-
-      {/* mobile menu bar  */}
-
-
-      <div id="menubar" className="menubar h-full w-[15%] flex items-center justify-cente sm:hidden z-[999]">
-        <Hamburger
-          toggled={isOpen}
-          toggle={setOpen}
-          size={25}
-          duration={0.8}
-          distance="sm"
-          color="#4FD1C5"
-          rounded
-        />
       </div>
     </motion.div>
   );

@@ -7,7 +7,7 @@ export type CursorTrail = {
 
 export function cursorTrail(props: CursorTrail) {
   const colorRaw = getComputedStyle(document.documentElement).getPropertyValue(
-    "--accent",
+    "",
   );
   const accentColor = `hsla(${
     colorRaw ? colorRaw.split(" ").join(",") : "0, 0%, 0%"

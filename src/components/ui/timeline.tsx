@@ -39,7 +39,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
     >
       <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
         <h2 className="text-[8vw] md:text-[3vw] mb-4 text-black dark:text-white max-w-4xl">
-           My Education journey
+           My <span className="text-[--mainText] dark:text-[--mainText]" >Education</span> journey
         </h2>
         <p className="text-gray-700 dark:text-neutral-300 text-sm md:text-base max-w-lg">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit at, minus dolorem itaque explicabo cumque. Error ducimus iusto ut tenetur?
@@ -80,7 +80,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
               height: heightTransform,
               opacity: opacityTransform,
             }}
-            className="absolute inset-x-0 top-0  w-[2px] bg-gradient-to-t from-[#59e1e4] via-[#2bfbff] to-transparent from-[0%] via-[10%] rounded-full"
+            className="absolute inset-x-0 top-0  w-[2px] bg-gradient-to-t from-[--mainText] dark:from-[--mainText] via-[--mainText] dark:via-[--mainText] to-transparent from-[0%] via-[10%] rounded-full"
           />
         </div>
       </div>

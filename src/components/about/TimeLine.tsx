@@ -9,7 +9,7 @@ const TimelineDemo=()=> {
       title: "2020",
       content: (
         <div> 
-          <p className="text-[#59e1e4] dark:text-[#59e1e4] text-[8vw] md:text-[2.2vw] font-normal mb-4">
+          <p className="text-[--mainText] dark:text-[--mainText] text-[7vw] md:text-[2.2vw] font-medium mb-4">
           Matriculation ( CBSE )
   
           </p>
@@ -27,7 +27,7 @@ const TimelineDemo=()=> {
       title: "2022",
       content: (
         <div>
-          <p className="text-[#59e1e4] dark:text-[#59e1e4] text-[8vw] md:text-[2.1vw] font-normal mb-8">
+          <p className="text-[--mainText] dark:text-[--mainText] text-[7vw] md:text-[2.1vw] font-medium mb-8">
           AISSCE ( SCIENCE )
           </p>
           <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
@@ -43,7 +43,7 @@ const TimelineDemo=()=> {
         title: "2025",
         content: (
           <div>
-            <p className="text-[#59e1e4] dark:text-[#59e1e4] text-[8vw] md:text-[2.1vw] font-normal mb-8">
+            <p className="text-[--mainText] dark:text-[--mainText] text-[7vw] md:text-[2.1vw] font-medium mb-8">
             Graudation ( BCA )
             </p>
             <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
@@ -55,10 +55,9 @@ const TimelineDemo=()=> {
           </div>
         ),
       },
-      
     ];
   return (
-    <div className="w-full">
+    <div className="w-full mt-20">
       <Timeline data={data} />
     </div>
   );

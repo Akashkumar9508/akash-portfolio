@@ -1,7 +1,6 @@
 "use client";
-import { CSSProperties} from "react";
-import { useEffect } from "react";
-import { useRef } from "react";
+
+import { CSSProperties, useEffect, useRef, useState } from "react";
 import { cursorTrail } from "@/components/ui/cursor-trail";
 
 export interface CursorTrailCanvasProps {
@@ -11,12 +10,21 @@ export interface CursorTrailCanvasProps {
 }
 
 export default function CursorTrailCanvas(props: CursorTrailCanvasProps) {
-  const refCanvas = useRef<HTMLCanvasElement>(null!); 
+  const refCanvas = useRef<HTMLCanvasElement>(null!);
+  const [mainTextColor, setMainTextColor] = useState("#A294F9");
+  
 
   useEffect(() => {
+    // Ensure this runs only in the browser
+    if (typeof window !== "undefined") {
+      const rootStyle = getComputedStyle(document.documentElement);
+      const color = rootStyle.getPropertyValue("--mainText").trim();
+      setMainTextColor(color || "#A294F9");
+    }
+
     const { cleanUp, renderTrailCursor } = cursorTrail({
       ref: refCanvas,
-      color: "#349698",
+      color: props.color || mainTextColor, 
     });
 
     renderTrailCursor();
@@ -24,7 +32,7 @@ export default function CursorTrailCanvas(props: CursorTrailCanvasProps) {
     return () => {
       cleanUp();
     };
-  }, [props.color]);
+  }, [props.color, mainTextColor]); 
 
   return <canvas ref={refCanvas} className={props.className} style={props.style}></canvas>;
 }
