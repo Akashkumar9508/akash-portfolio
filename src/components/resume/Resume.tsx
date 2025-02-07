@@ -1,4 +1,4 @@
-"use client"; // For Next.js 13 client-side rendering
+"use client";
 import React, { useState, useEffect } from "react";
 import { Document, Page, pdfjs } from "react-pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";

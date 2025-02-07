@@ -1,3 +1,4 @@
+"use client";
 const navLinks = [
     { name: "Home", href: "/" },
     // { name: "Contact", href: "/contact" },

@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useState, useEffect } from "react";
 import navLinks from "@/data/navLinks";
 import Link from "next/link";

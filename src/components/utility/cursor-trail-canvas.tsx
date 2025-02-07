@@ -1,5 +1,4 @@
 "use client";
-
 import { CSSProperties, useEffect, useRef, useState } from "react";
 import { cursorTrail } from "@/components/ui/cursor-trail";
 
