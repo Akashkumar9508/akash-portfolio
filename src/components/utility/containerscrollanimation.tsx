@@ -28,10 +28,10 @@ const HeroScrollDemo = () => {
       >
         <div
           className="w-full rounded-2xl object-cover h-full object-left-top flex flex-col gap-2 ">
-          <div className="linkdin-github gap-2 sm:h-1/2 h-full  w-full  flex sm:flex-row flex-col">
+          <div className="linkdin-github gap-2 md:h-1/2 h-full  w-full  flex md:flex-row flex-col">
             <WobbleCard>
 
-              <div className="github-page-div rounded-2xl sm:w-full h-full">
+              <div className="github-page-div rounded-2xl md:w-full h-full">
                 <Link href="https://github.com/Akashkumar9508">
                   <Image src={Github} className="h-full w-full relative z-50" title="visit on Github" alt="GitHub Logo" />
                 </Link>
@@ -39,7 +39,7 @@ const HeroScrollDemo = () => {
 
             </WobbleCard>
             <WobbleCard>
-              <div className="w-full sm:w-full h-full  rounded-2xl overflow-hidden ">
+              <div className="w-full md:w-full h-full  rounded-2xl overflow-hidden ">
                 <Link href={"https://www.linkedin.com/in/akashkkumar9508/"}>
                   <Image src={Linkedin} alt="logo" className="h-full w-full relative z-50 " title="visit on Linkedin"></Image>
                 </Link>
@@ -47,7 +47,7 @@ const HeroScrollDemo = () => {
             </WobbleCard>
           </div>
           <WobbleCardYoutube>
-            <div className="youtube h-full w-full rounded-2xl overflow-hidden hidden sm:block">
+            <div className="youtube h-full w-full rounded-2xl overflow-hidden hidden md:block">
               <Link href="https://www.youtube.com/@codeon-9508">
                 <Image src={Youtube} alt="logo" className="h-full w-full relative z-50" title="visit on Youtube" ></Image>
               </Link>

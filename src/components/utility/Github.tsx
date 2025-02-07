@@ -18,10 +18,10 @@ const Github: React.FC = () => {
       </h1>
       <GitHubCalendar
         username="Akashkumar9508"
-        blockSize={15}
+        blockSize={14}
         blockMargin={5}
         theme={theme}
-        fontSize={16}
+        fontSize={16} 
       />
     </Row>
   );

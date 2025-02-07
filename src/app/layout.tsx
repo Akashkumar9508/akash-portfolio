@@ -8,6 +8,7 @@ import useLenis from '@/hooks/useLenis';
 import favicon from "@/assets/favicon.ico"
 import CurrentTime from "@/components/ui/CurrentTime";
 import { Providers } from "@/components/utility/ThemeProvider"
+import SocialMediaLinks from "@/components/utility/SocialMediaLinks";
 
 const metadata: Metadata = {
   title: "Akash Kumar",
@@ -31,6 +32,9 @@ export default function RootLayout({
         <CurrentTime />
           <Navbar />
           <NavbarMobile />
+          <div className="hidden md:block  fixed bottom-1 right-12  h-48 w-16  z-[999]">
+            <SocialMediaLinks/>
+          </div>
           <CursorTrailCanvas className="pointer-events-none fixed inset-0 -z-10 h-full w-full hidden md:block " />
           {children}
         </Providers>
