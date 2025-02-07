@@ -1,28 +1,21 @@
 "use client";
 import React, { useState } from "react";
-import { Squeeze as Hamburger } from "hamburger-react";
 import { motion } from "framer-motion";
-
-// import FloatingDockDemo from "./FloatingDockDemo";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import AnimatedLogo from "@/components/utility/animated-logo";
 import navLinks from "@/data/navLinks"
 import ThemeSwitch from "@/components/ui/ThemeSwitch";
+import FadeDown from "@/animations/fade-down";
 
 const Navbar = () => {
-  const [isOpen, setOpen] = useState<boolean>(false);
   const pathname = usePathname(); 
 
   return (
+    <FadeDown key="navbar" duration={0.6}>
     <motion.div
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.5 }}
-      className=" hidden nav bg-transparent h-[10vh] sm:h-[12vh]  w-full sm:flex  justify-between items-center px-2 sm:px-16 z-[999]">
-
+      className="hidden nav bg-transparent h-[10vh] sm:h-[12vh]  w-full sm:flex  justify-between items-center px-2 sm:px-16 z-[999]">
       {/* main logo of the site  */}
-
       <div className="logo h-12 w-12 ml-3 sm:ml-0 z-50 flex">
         <AnimatedLogo />
       </div>
@@ -34,7 +27,7 @@ const Navbar = () => {
           <Link
             key={link.href}
             href={link.href}
-            className={`linkMobileNav relative hover:text-[--mainText] dark:hover:text-[--mainText] hover:decoration-2 hover:decoration-[--mainText]  dark:hover:decoration-[--mainText] hover:transition-ease-in-out hover:duration-300 
+            className={`linkMobileNav relative hover:text-[--mainText] dark:hover:text-[--mainText] hover:decoration-2 hover:decoration-[--mainText] hover:scale-[1.1]  dark:hover:decoration-[--mainText] hover:transition-ease-in hover:duration-300  
            ${pathname === link.href
             ? "text-[--mainText] dark:hover:text-[--mainText] decoration-2 decoration-black"
             : ""
@@ -74,6 +67,7 @@ const Navbar = () => {
         <ThemeSwitch />
       </div>
     </motion.div>
+      </FadeDown>
   );
 };
 

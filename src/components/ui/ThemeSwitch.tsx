@@ -25,7 +25,7 @@ export default function ThemeSwitch() {
 
   const handleThemeChange = (newTheme: string) => {
     setTheme(newTheme)
-    window.location.reload()
+    // window.location.reload()
   }
 
   if (resolvedTheme === 'dark') {

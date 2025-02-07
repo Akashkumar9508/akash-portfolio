@@ -4,11 +4,17 @@ import TimelineDemo from "@/components/about/TimeLine"
 
 const page = () => {
   return (
-    <div>
-      {/* <AboutHero /> */}
-      <TimelineDemo />
-    
-    </div>
+    <>
+      <div className='relative h-auto'>
+        <AboutHero />
+        
+        </div>
+        <div className="div">
+        <TimelineDemo />
+
+        </div>
+        <div className="main"></div>
+    </>
   )
 }
 
