@@ -11,6 +11,7 @@ import AboutHero from "@/components/about/herosection";
 import { AnimatePresence } from "framer-motion";
 import { motion } from "framer-motion";
 import FadeUp from "@/animations/fade-up";
+import Skill from "@/components/skill/page"
 
 
 
@@ -66,12 +67,13 @@ export default function Home() {
           </div>
         </FadeUp>
         <FadeUp key="skills" duration={0.6} whileInView={true} >
-          <div className="skill w-full  h-lvh bg-gray-400 mt-40 sm:mt-40">
-            {/* skill section here  */}
+          <div className="skill w-full min-h-60  md:mt-28 sm:mt-72 ">
+            <h1 className="project-heading text-black dark:text-white text-[8vh] sm:text-[8vh] mb-24 sm:mb-28 md:text-center " >Skills I <span className="text-[--mainText] dark:text-[--mainText] font-bold ">KNOW</span></h1>
+            <Skill />
           </div>
         </FadeUp>
         <FadeUp key="github" duration={0.6} whileInView={true} >
-          <div className="github w-full sm:mb-40  flex justify-center items-center">
+          <div className="github w-full sm:mb-40  flex justify-center md:mt-28 items-center">
             <Github />
           </div>
         </FadeUp>

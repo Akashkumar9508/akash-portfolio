@@ -31,7 +31,7 @@
     /* --mainText: #A294F9; */
     --mainText: #00b9bc;
     --Background: #f2f9fa;
-  }
+/* absolute content-[""] border-2 border-dotted rounded-lg border-[--mainText] dark:border-[--mainText] -top-5 -right-5 h-full z-40 w-full */  }
   .dark{
     --mainText: #59e1e4;
     --Background: #000000;
@@ -64,5 +64,32 @@ body {
   }
 }
 
+.skill{
+  z-index: 50;
+}
+.hoverdiv:hover{
+  transition: .5s ease-in-out;
+  .skillborder{
+    top:-15px;
+    right:-15px;
+  }
+  .iamgeskill{
+    scale: 1.05;
+    transition: .4s ease-in-out;
+  }
+  .textSkill{
+    scale:0.9;
+    transition: .4s ease-in-out;
+  }
+}
 
-
+.skillborder{
+position: absolute;
+content: "";
+height: 100%;
+width: 100%;
+top: 0px;
+right: 0px;
+z-index: -40;
+transition: .2s ease-in-out;
+}
