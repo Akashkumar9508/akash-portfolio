@@ -27,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning> 
       <link rel="shortcut icon" href={favicon.src} type="image/x-icon" />
-      <body className="antialiased overflow-x-hidden relative bg-[--Background] dark:bg-[--Background] "> 
+      <body className="antialiased overflow-x-hidden relative bg-[--Background] dark:bg-[--Background] select-none "> 
         <Providers>
         <CurrentTime />
           <Navbar />
