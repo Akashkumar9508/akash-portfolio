@@ -8,11 +8,13 @@
     "start": "next start"
   },
   "dependencies": {
+    "@lottiefiles/dotlottie-react": "^0.12.3",
     "@tabler/icons-react": "^3.29.0",
     "clsx": "^2.1.1",
     "dayjs": "^1.11.13",
     "hamburger-react": "^2.5.2",
     "lenis": "^1.1.20",
+    "lottie-react": "^2.4.1",
     "mini-svg-data-uri": "^1.4.4",
     "motion": "^12.0.11",
     "next": "15.1.6",
