@@ -13,6 +13,7 @@ import { motion } from "framer-motion";
 import FadeUp from "@/animations/fade-up";
 import Skill from "@/components/skill/page"
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+import {OrbitingCirclesDemo} from "@/components/skill/SpinSkill"
 
 
 
@@ -40,7 +41,7 @@ export default function Home() {
 
   return (
     <div 
-      className="relative w-full min-h-60 md:min-h-[85vh px-7 sm:px-14">
+      className="relative w-full min-h-60 md:min-h-[85vh px-6 sm:px-14">
       <AnimatePresence>
         <div className="div w-full md:flex mt-10 sm:mt-0 ">
         <motion.div animate={{
@@ -73,10 +74,12 @@ export default function Home() {
           </div>
         </FadeUp>
         <FadeUp key="skills" duration={0.6} whileInView={true} >
+
           <div className="skill w-full min-h-60  md:mt-28 sm:mt-72 ">
             <h1 className="project-heading text-black dark:text-white text-[8vh] sm:text-[8vh] mb-24 sm:mb-28 md:text-center " >Skills I <span className="text-[--mainText] dark:text-[--mainText] font-bold ">KNOW</span></h1>
             <Skill />
           </div>
+          <OrbitingCirclesDemo />
         </FadeUp>
         <FadeUp key="github" duration={0.6} whileInView={true} >
           <div className="github w-full sm:mb-40  flex justify-center md:mt-28 items-center">
