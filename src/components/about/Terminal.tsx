@@ -3,6 +3,7 @@ import {
     Terminal,
     TypingAnimation,
   } from "@/components/ui/terminal";
+  import Link from "next/link";
   
   export function TerminalDemo() {
     return (
@@ -10,39 +11,39 @@ import {
         <TypingAnimation>&gt; Loading About Me...</TypingAnimation>
   
         <AnimatedSpan delay={1500} className="text-green-500">
-          <span>✔ Welcome to my digital space.</span>
+          <span className="text-[3.1vw] sm:text-[1vw] " >✔ Welcome to my digital space.</span>
         </AnimatedSpan>
   
         <AnimatedSpan delay={2000} className="text-green-500">
-          <span>✔ Passionate about web development & innovation.</span>
+          <span className="text-[3.1vw] sm:text-[1vw] " >✔ Passionate about web development & innovation.</span>
         </AnimatedSpan>
   
         <AnimatedSpan delay={2500} className="text-green-500">
-          <span>✔ Skilled in MERN stack & modern UI/UX.</span>
+          <span className="text-[3.1vw] sm:text-[1vw] " >✔ Skilled in MERN stack & modern UI/UX.</span>
         </AnimatedSpan>
   
         <AnimatedSpan delay={3000} className="text-green-500">
-          <span>✔ Always learning & pushing boundaries.</span>
+          <span className="text-[3.1vw] sm:text-[1vw] " >✔ Always learning & pushing boundaries.</span>
         </AnimatedSpan>
   
         <AnimatedSpan delay={3500} className="text-green-500">
-          <span>✔ Enthusiastic about building high-performance applications.</span>
+          <span className="text-[3.1vw] sm:text-[1vw] " >✔ Enthusiastic about building high-performance applications.</span>
         </AnimatedSpan>
   
         <AnimatedSpan delay={4000} className="text-green-500">
-          <span>✔ Open to collaborations & new opportunities.</span>
+          <span className="text-[3.1vw] sm:text-[1vw] " >✔ Open to collaborations & new opportunities.</span>
         </AnimatedSpan>
   
         <AnimatedSpan delay={4500} className="text-green-500">
-          <span>✔ Turning ideas into reality with code.</span>
+          <span className="text-[3.1vw] sm:text-[1vw] " >✔ Turning ideas into reality with code.</span>
         </AnimatedSpan>
   
         <AnimatedSpan delay={5000} className="text-green-500">
-          <span>✔ Striving for clean, efficient, and scalable solutions.</span>
+          <span className="text-[3.1vw] sm:text-[1vw] " >✔ Striving for clean, efficient, and scalable solutions.</span>
         </AnimatedSpan>
   
         <AnimatedSpan delay={5500} className="text-green-500">
-          <span>✔ Let's create something amazing together!</span>
+          <span className="text-[3.1vw] sm:text-[1vw] " >✔ Let's create something amazing together!</span>
         </AnimatedSpan>
   
         <AnimatedSpan delay={6000} className="text-blue-500">
