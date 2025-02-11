@@ -18,6 +18,7 @@ import {OrbitingCirclesDemo} from "@/components/skill/SpinSkill"
 
 
 
+
 export default function Home() {
   const [scrollY, setScrollY] = useState(0);
   const ref = useRef<HTMLDivElement>(null);
@@ -48,12 +49,12 @@ export default function Home() {
           transform: `translateY(${progress * 10}vh)`,
         }}
         transition={{ type: "spring", stiffness: 30 }}
-        ref={ref} className="w-full sm:w-1/2 h-[40vh] md:order-2 order-2 sm:h-[80vh] flex flex-col sm:justify-end gap-2 pt-10 sm:pt-0 text-black dark:text-white ">
-          <FadeUp key="title" duration={0.6} ><pre className="font-bold"><h1 className="text-[8vw] sm:text-[3vw] sm:text-3xl md:text-6xl">Hi, I&apos;m Akash Kumar</h1>
-            <span className="text-[6vw] sm:text-[2.5vw]" >I'am </span><span className=" text-[6vw] sm:text-[2.5vw] inline " ><FlipWordsDemo /></span></pre>
+        ref={ref} className=" w-full sm:w-1/2 h-[40vh] md:order-2 order-2 sm:h-[80vh] flex flex-col sm:justify-end gap-2 pt-10 sm:pt-0 text-black dark:text-white ">
+          <FadeUp key="title" duration={0.6} ><pre className="font-bold"><h1 className="text-[8vw] sm:text-[3vw] sm:text-3xl md:text-6xl font-[MyCustomFont]">Hi, I&apos;m Akash Kumar</h1>
+            <span className="font-[MyCustomFont] text-[6vw] sm:text-[2.5vw]" >I'am </span><span className=" text-[6vw] sm:text-[2.5vw] inline " ><FlipWordsDemo /></span></pre>
           </FadeUp>
           <FadeUp key="description" duration={0.6} delay={0.4}>
-            <p className="text-[4vw] sm:text-[1.2vw]">I&apos;m a software developer specializing in high-performance, user-centric web applications. Skilled in <span className="text-[--mainText] dark:text-[--mainText] ">React.js</span>, <span className="text-[--mainText] dark:text-[--mainText]">Next.js</span>, and modern web technologies, I build seamless, scalable, and efficient solutions across the stack.</p>
+            <p className="text-[4vw] sm:text-[1.2vw] ">I&apos;m a software developer specializing in high-performance, user-centric web applications. Skilled in <span className="text-[--mainText] dark:text-[--mainText] ">React.js</span>, <span className="text-[--mainText] dark:text-[--mainText]">Next.js</span>, and modern web technologies, I build seamless, scalable, and efficient solutions across the stack.</p>
           </FadeUp>
         </motion.div>
           <div className="div lgogo md:w-1/2 h-[40vh] md:h-[80vh] md:order-2 order-1">
@@ -65,7 +66,6 @@ export default function Home() {
                 />
           </div>
         </div>
-
 
 
         <FadeUp key="about" duration={0.6} whileInView={true} >

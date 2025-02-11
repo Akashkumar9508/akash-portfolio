@@ -1,11 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-*{
-  font-family: "Ubuntu", serif;
+
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url('/fonts/Mileast-drqXX.otf') format('opentype'); /* Remove /public */
+  /* font-weight: normal;
+  font-style: normal; */
+}
+@font-face {
+  font-family: 'textFonts';
+  src: url('/fonts/font2.otf') format('opentype'); /* Remove /public */
+  /* font-weight: normal;
+  font-style: normal; */
+}
+
+* {
+  font-family: 'Ubuntu';
+}
+
+body {
+  font-family: 'Fira Code', monospace;
+}
+
+
+
+body{
+  /* font-family: 'MyCustomFont'; */
 }
 
 
