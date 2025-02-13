@@ -15,7 +15,8 @@ This is the codebase for my personal portfolio website built using **Next.js** a
   - **Next.js** for server-side rendering and routing.
   - **TypeScript** for static type checking.
   - **Tailwind CSS** for fast and flexible styling.
-  - **Framer Motion** for animations.
+  - **Framer Motion** for animations .  
+  - **lenis** for smooth animation .  
 
 ## Directory Structure
 
