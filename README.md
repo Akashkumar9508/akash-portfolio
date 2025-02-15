@@ -17,6 +17,8 @@ This is the codebase for my personal portfolio website built using **Next.js** a
   - **Tailwind CSS** for fast and flexible styling.
   - **Framer Motion** for animations .  
   - **lenis** for smooth animation .  
+  - **Framer** for animation.  
+
 
 ## Directory Structure
 
