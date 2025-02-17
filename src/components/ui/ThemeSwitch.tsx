@@ -13,7 +13,7 @@ export default function ThemeSwitch() {
   useEffect(() => {
     if (!mounted) return;
     const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.ctrlKey && event.key === "d") {
+      if (event.ctrlKey && event.key === "i") {
         event.preventDefault()
         setTheme(resolvedTheme === "light" ? "dark" : "light")
       }
