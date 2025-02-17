@@ -15,8 +15,13 @@ export default {
       animation: {
         shimmer: "shimmer 2s linear infinite",
         orbit: "orbit calc(var(--duration)*1s) linear infinite",
+        "line-shadow": "line-shadow 15s linear infinite",
       },
       keyframes: {
+        "line-shadow": {
+          "0%": { "background-position": "0 0" },
+          "100%": { "background-position": "100% -100%" },
+        },
         shimmer: {
           from: {
             backgroundPosition: "0 0",

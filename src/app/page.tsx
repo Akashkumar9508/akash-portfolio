@@ -14,6 +14,7 @@ import FadeUp from "@/animations/fade-up";
 import Skill from "@/components/skill/page"
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import {OrbitingCirclesDemo} from "@/components/skill/SpinSkill"
+import {LineShadowTextDemo} from "@/components/skill/TextShadow"
 
 
 
@@ -76,7 +77,7 @@ export default function Home() {
         <FadeUp key="skills" duration={0.6} whileInView={true} >
 
           <div className="skill w-full min-h-60  md:mt-28 sm:mt-72 ">
-            <h1 className="project-heading text-black dark:text-white text-[8vh] sm:text-[8vh] mb-24 sm:mb-28 md:text-center " >Skills I <span className="text-[--mainText] dark:text-[--mainText] font-bold ">KNOW</span></h1>
+            <LineShadowTextDemo />
             <Skill />
           </div>
           <OrbitingCirclesDemo />
