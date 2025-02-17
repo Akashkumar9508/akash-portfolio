@@ -3,6 +3,7 @@ import React from 'react'
 import AboutHero from "@/components/about/herosection";
 import TimelineDemo from "@/components/about/TimeLine"
 import { TerminalDemo } from '@/components/about/Terminal';
+import {Form} from "@/components/utility/Form"
 
 const page = () => {
   return (
@@ -21,7 +22,9 @@ const page = () => {
         <TimelineDemo />
 
       </div>
-      <div className="main"></div>
+      <div className="main">
+        <Form />
+      </div>
     </>
   )
 }
