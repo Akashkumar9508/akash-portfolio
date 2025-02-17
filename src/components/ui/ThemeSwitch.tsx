@@ -42,15 +42,17 @@ export default function ThemeSwitch() {
   if (resolvedTheme === 'dark') {
     return (
       <FiSun 
-        className="dark:text-white text-[--Background] hover:text-[--mainText] hover:dark:text-[--mainText] text-3xl sm:text-2xl transition-all duration-300"
-        onClick={() => handleThemeChange('light')} 
+      title="ctrl + D"
+      className="dark:text-white text-[--Background] hover:text-[--mainText] hover:dark:text-[--mainText] text-3xl sm:text-2xl transition-all duration-300"
+      onClick={() => handleThemeChange('light')} 
       />
     )
   }
-
+  
   if (resolvedTheme === 'light') {
     return (
       <FiMoon 
+      title="ctrl + D"
         className="text-black dark:text-[--Background] hover:text-[--mainText] hover:dark:text-[--mainText] text-3xl sm:text-2xl transition-all duration-300" 
         onClick={() => handleThemeChange('dark')} 
       />
