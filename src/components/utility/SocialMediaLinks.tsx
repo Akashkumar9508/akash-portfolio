@@ -3,13 +3,17 @@ import React from 'react'
 import { FaGithub } from "react-icons/fa";
 import { AiFillLinkedin } from "react-icons/ai";
 import { FaInstagram } from "react-icons/fa";
-import { motion } from 'framer-motion'
+import { motion ,AnimatePresence } from 'framer-motion'
 import Link from 'next/link'
+import FadeUp from '@/animations/fade-up';
+import { Fade } from 'hamburger-react';
 
 
 
 const SocialMediaLinks = () => {
   return (
+    <AnimatePresence>
+    <FadeUp duration={0.6} whileInView={true} >
     <div className='h-full w-full flex flex-col items-center justify-end gap-2 m-auto'>
       {/* github link  */}
       <Link href="https://github.com/Akashkumar9508" target='_blank' ><div className="socialLink  h-12 w-12 sm:h-10 sm:w-10 border-2 border-[--mainText] dark:border-[--mainText]  rounded-full grid items-center "><FaGithub className='innerIcons text-[8vw] sm:text-[1.5vw] m-auto text-[--mainText] dark:text-[--mainText]' /></div></Link> 
@@ -26,6 +30,8 @@ const SocialMediaLinks = () => {
       </motion.div>
 
     </div>
+    </FadeUp>
+    </AnimatePresence>
   )
 }
 

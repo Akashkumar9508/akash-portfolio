@@ -10,6 +10,7 @@ import CurrentTime from "@/components/ui/CurrentTime";
 import { Providers } from "@/components/utility/ThemeProvider"
 import SocialMediaLinks from "@/components/utility/SocialMediaLinks";
 import Footer from "@/components/utility/Footer";
+import {ScrollProgressDemo} from "@/components/utility/ScrollProgress"
 
 
 const metadata: Metadata = {
@@ -30,6 +31,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning> 
       <link rel="shortcut icon" href={favicon.src} type="image/x-icon" />
       <body className="antialiased overflow-x-hidden relative bg-[--Background] dark:bg-[--Background] select-none "> 
+        <ScrollProgressDemo />
         <Providers>
         <CurrentTime />
           <Navbar />
