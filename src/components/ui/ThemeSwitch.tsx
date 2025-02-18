@@ -42,7 +42,7 @@ export default function ThemeSwitch() {
   if (resolvedTheme === 'dark') {
     return (
       <FiSun 
-      title="ctrl + D"
+      title="ctrl + i"
       className="dark:text-white text-[--Background] hover:text-[--mainText] hover:dark:text-[--mainText] text-3xl sm:text-2xl transition-all duration-300"
       onClick={() => handleThemeChange('light')} 
       />
@@ -52,7 +52,7 @@ export default function ThemeSwitch() {
   if (resolvedTheme === 'light') {
     return (
       <FiMoon 
-      title="ctrl + D"
+      title="ctrl + i"
         className="text-black dark:text-[--Background] hover:text-[--mainText] hover:dark:text-[--mainText] text-3xl sm:text-2xl transition-all duration-300" 
         onClick={() => handleThemeChange('dark')} 
       />
