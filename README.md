@@ -18,6 +18,7 @@ This is the codebase for my personal portfolio website built using **Next.js** a
   - **Framer Motion** for animations .  
   - **lenis** for smooth animation .  
   - **Framer** for animation.  
+  - **mail** smtp.  
 
 
 ## Directory Structure
