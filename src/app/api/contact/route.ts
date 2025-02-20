@@ -20,7 +20,7 @@ export async function POST(req: Request) {
     });
 
     const mailOptions = {
-      from: "akashbca9508@gmail.com", // Must be a verified sender
+      from: "akashbca9508@gmail.com", 
       to: "akashbca9508@gmail.com",
       subject: `New Contact Form Submission: ${name}`,
       html: `
