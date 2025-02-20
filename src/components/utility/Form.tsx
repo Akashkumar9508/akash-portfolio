@@ -1,21 +1,52 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
-import {
-  IconBrandGithub,
-  IconBrandGoogle,
-  IconBrandOnlyfans,
-} from "@tabler/icons-react";
 
 export function Form() {
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    console.log("Form submitted");
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+  });
+
+  const [loading, setLoading] = useState(false);
+  const [message, setMessage] = useState("");
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setLoading(true);
+    setMessage("");
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await res.json();
+
+      if (res.ok) {
+        setMessage("Message sent successfully!");
+        setFormData({ name: "", email: "", subject: "" });
+      } else {
+        setMessage(data.message || "Something went wrong.");
+      }
+    } catch (error) {
+      setMessage("Failed to send message.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
-    <div className="max-w-md w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-[--background] dark:bg-[--background]">
+    <div className="max-w-md w-full mx-auto p-4 md:p-8 shadow-input bg-[--background] dark:bg-[--background]">
       <h2 className="font-bold text-xl text-neutral-800 dark:text-neutral-200">
         Send a message
       </h2>
@@ -24,56 +55,59 @@ export function Form() {
       </p>
 
       <form className="my-8" onSubmit={handleSubmit}>
-        <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
-          <LabelInputContainer>
-            <Label htmlFor="firstname">Name</Label>
-            <Input id="firstname" placeholder="Tyler" type="text" />
-          </LabelInputContainer>
-          
-        </div>
-        <LabelInputContainer className="mb-4">
-          <Label htmlFor="email">Email Address</Label>
-          <Input id="email" placeholder="projectmayhem@fc.com" type="email" />
-        </LabelInputContainer>
-        <LabelInputContainer className="mb-8">
-          <Label htmlFor="twitterpassword">Subject</Label>
+        <LabelInputContainer>
+          <Label htmlFor="name">Name</Label>
           <Input
-            id="twitterpassword"
-            placeholder="Subject"
-            type="twitterpassword"
+            id="name"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            placeholder="Your Name"
+            type="text"
+            required
+          />
+        </LabelInputContainer>
+
+        <LabelInputContainer>
+          <Label htmlFor="email">Email Address</Label>
+          <Input
+            id="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            placeholder="you@example.com"
+            type="email"
+            required
+          />
+        </LabelInputContainer>
+
+        <LabelInputContainer>
+          <Label htmlFor="subject">Subject</Label>
+          <Input
+            id="subject"
+            name="subject"
+            value={formData.subject}
+            onChange={handleChange}
+            placeholder="Your Message"
+            type="text"
+            required
           />
         </LabelInputContainer>
 
         <button
-          className="bg-gradient-to-br relative group/btn bg-[--mainText]  dark:bg-[--mainText]  w-full text-white dark:text-black rounded-md h-10 font-medium "
-          type="submit">
-          Send Message &rarr;
-          <BottomGradient />
+          className="bg-gradient-to-br relative group/btn bg-[--mainText] dark:bg-[--mainText] w-full text-white dark:text-black rounded-md h-10 font-medium"
+          type="submit"
+          disabled={loading}
+        >
+          {loading ? "Sending..." : "Send Message →"}
         </button>
+
+        {message && <p className="mt-4 text-center text-sm">{message}</p>}
       </form>
     </div>
   );
 }
 
-const BottomGradient = () => {
-  return (
-    <>
-      <span className="group-hover/btn:opacity-100 block transition duration-500 opacity-0 absolute h-px w-full -bottom-px inset-x-0 bg-gradient-to-r from-transparent via-cyan-500 to-transparent" />
-      <span className="group-hover/btn:opacity-100 blur-sm block transition duration-500 opacity-0 absolute h-px w-1/2 mx-auto -bottom-px inset-x-10 bg-gradient-to-r from-transparent via-cyan-500 to-transparent" />
-    </>
-  );
-};
-
-const LabelInputContainer = ({
-  children,
-  className,
-}: {
-  children: React.ReactNode;
-  className?: string;
-}) => {
-  return (
-    <div className={cn("flex flex-col space-y-2 w-full", className)}>
-      {children}
-    </div>
-  );
+const LabelInputContainer = ({ children }: { children: React.ReactNode }) => {
+  return <div className="flex flex-col space-y-2 w-full mb-4">{children}</div>;
 };

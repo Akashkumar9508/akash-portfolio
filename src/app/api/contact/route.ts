@@ -1,0 +1,52 @@
+import { NextResponse } from "next/server";
+import nodemailer from "nodemailer";
+
+export async function POST(req: Request) {
+  try {
+    const { name, email, subject } = await req.json();
+
+    if (!name || !email || !subject) {
+      return NextResponse.json({ message: "All fields are required" }, { status: 400 });
+    }
+
+    const transporter = nodemailer.createTransport({
+      host: "smtp-relay.brevo.com",
+      port: 587,
+      secure: false, // Use `true` for port 465, `false` for 587
+      auth: {
+        user: "86485b001@smtp-brevo.com",
+        pass: "xsmtpsib-70eacb5973c1d1dca66b36ba0d85bf6a44c88b14b67e93840a99d99e2911fbe8-7AbcOLzyJHUwEFGP",
+      },
+    });
+
+    const mailOptions = {
+      from: "akashbca9508@gmail.com", // Must be a verified sender
+      to: "akashbca9508@gmail.com",
+      subject: `New Contact Form Submission: ${name}`,
+      html: `
+        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: auto; padding: 20px; border: 1px solid #ddd; border-radius: 8px; background-color: #f9f9f9;">
+          <h2 style="color: #333; text-align: center;">📩 New Contact Form Submission</h2>
+          
+          <div style="background-color: #fff; padding: 15px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);">
+            <p><strong style="color: #555;">Name:</strong> ${name}</p>
+            <p><strong style="color: #555;">Email:</strong> <a href="mailto:${email}" style="color: #007bff;">${email}</a></p>
+            <p><strong style="color: #555;">Message:</strong></p>
+            <p style="background-color: #f1f1f1; padding: 10px; border-radius: 5px; color: #333;">${subject}</p>
+          </div>
+    
+          <footer style="text-align: center; margin-top: 20px; font-size: 12px; color: #777;">
+            <p>🔹 Sent from your Portfolio Website</p>
+          </footer>
+        </div>
+      `,
+    };
+    
+
+    await transporter.sendMail(mailOptions);
+
+    return NextResponse.json({ message: "Message sent successfully!" }, { status: 200 });
+  } catch (error) {
+    console.error("Nodemailer Error:", error);
+    return NextResponse.json({ message: "Failed to send email" }, { status: 500 });
+  }
+}
