@@ -6,7 +6,7 @@ import Lenis from 'lenis';
 const useLenis = () => {
   useEffect(() => {
     const lenis = new Lenis({
-      duration: 1.4, // Controls the smoothness
+      duration: 1.5, // Controls the smoothness
       easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Optional custom easing
     });
 
