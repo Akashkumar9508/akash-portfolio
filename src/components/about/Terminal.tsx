@@ -48,8 +48,8 @@ import {
   
         <AnimatedSpan delay={6000} className="text-blue-500">
           <span>ℹ Get in Touch:</span>
-          <span className="pl-2">- Email: your.email@example.com</span>
-          <span className="pl-2">- LinkedIn: linkedin.com/in/yourprofile</span>
+          <Link href={"#email"} className="pl-2" >Email: akashbca9508@gmail.com</Link>
+          <Link href={"https://www.linkedin.com/in/akashkkumar9508/"} target="_blank" className="pl-2" >LinkedIn: linkedin.com/akashkkumar9508</Link>
         </AnimatedSpan>
   
         <TypingAnimation delay={6500} className="text-muted-foreground">

@@ -15,14 +15,13 @@ export async function POST(req: Request) {
 
 
     const transporter = nodemailer.createTransport({
-      host: process.env.BREVO_SMTP_SERVER, // Ensure this is set in .env
-      port: process.env.BREVO_SMTP_PORT, // Convert to number
-      secure: false, // Use `true` for port 465, `false` for 587
+      host: process.env.BREVO_SMTP_SERVER, 
+      port: process.env.BREVO_SMTP_PORT, 
+      secure: false, 
       auth: {
-        user: process.env.BREVO_SMTP_USER, // Your Brevo email
-        pass: process.env.BREVO_SMTP_PASSWORD, // Your Brevo SMTP password
-      },
-    } as SMTPTransport.Options);
+        user: process.env.BREVO_SMTP_USER, 
+        pass: process.env.BREVO_SMTP_PASSWORD, 
+      },} as SMTPTransport.Options);
 
     const mailOptions = {
       from: "akashbca9508@gmail.com", 

@@ -17,7 +17,9 @@ const Navbar = () => {
       className="hidden nav bg-transparent h-[10vh] sm:h-[12vh]  w-full sm:flex  justify-between items-center px-2 sm:px-16 z-[999]">
       {/* main logo of the site  */}
       <div className="logo h-12 w-12 ml-3 sm:ml-0 z-50 flex">
+        <Link href={"/"}>
         <AnimatedLogo />
+        </Link>
       </div>
 
       {/* nav links  */}

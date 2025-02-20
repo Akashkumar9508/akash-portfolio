@@ -40,7 +40,9 @@ const NavbarMobile = () => {
         className="sm:hidden relative top-0 w-full navbar h-[9vh] flex items-center justify-between px-2 bg-[#f2f9fa] dark:bg-[#000000] z-[999]"
       >
         <div className="logo h-12 w-12 ml-3 sm:ml-0 z-50 flex">
+          <Link href={"/"}>
           <AnimatedLogo />
+          </Link>
         </div>
         <div
           id="menubar"

@@ -22,7 +22,7 @@ const page = () => {
         <TimelineDemo />
 
       </div>
-      <div className="main">
+      <div className="main" id='email'>
         <Form />
       </div>
     </>
