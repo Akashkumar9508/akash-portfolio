@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
+import SMTPTransport from "nodemailer/lib/smtp-transport";
 
 export async function POST(req: Request) {
   try {
@@ -10,14 +11,14 @@ export async function POST(req: Request) {
     }
 
     const transporter = nodemailer.createTransport({
-      host: process.env.BREVO_SMTP_SERVER,
-      port: process.env.BREVO_SMTP_PORT,
+      host: process.env.BREVO_SMTP_SERVER, // Ensure this is set in .env
+      port: Number(process.env.BREVO_SMTP_PORT) || 587, // Convert to number
       secure: false, // Use `true` for port 465, `false` for 587
       auth: {
-        user: process.env.BREVO_SMTP_USER,
-        pass: process.env.BREVO_SMTP_PASSWORD,
+        user: process.env.BREVO_USER, // Your Brevo email
+        pass: process.env.BREVO_PASS, // Your Brevo SMTP password
       },
-    });
+    } as SMTPTransport.Options);
 
     const mailOptions = {
       from: "akashbca9508@gmail.com", 
