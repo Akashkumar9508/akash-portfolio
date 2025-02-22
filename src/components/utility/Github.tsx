@@ -6,8 +6,8 @@ import { Row } from "react-bootstrap";
 const Github: React.FC = () => {
 
   const theme = {
-    // dark: ["#111111", "#59e1e4", "#34e9ec", "#59b4b6", "#84b4b5"],
-    dark: ["#797979","#84b4b5" , "#59b4b6", "#34e9ec", "#59e1e4"],
+    dark: ["#111111", "#59e1e4", "#34e9ec", "#59b4b6", "#84b4b5"],
+    // dark: ["#797979","#84b4b5" , "#59b4b6", "#34e9ec", "#59e1e4"],
     light: ["#ffffff", "#59e1e4", "#34e9ec", "#59b4b6", "#84b4b5"],
   };
 
