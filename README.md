@@ -4,7 +4,7 @@ Welcome to my personal portfolio showcasing my skills, projects, and experience.
 
 ## About Me
 
-I'm Akash Kumar, a passionate Web developer with a strong interest in Development. I'm always eager to learn and explore new technologies. This portfolio represents my journey and the projects I've worked on.
+I'm Akash Kumar, a passionate Web developer with a strong interest in Development. I'm always eager to learn and explore new technologies. This portfolio represents my journey and the projects I've worked on. 
 
 
 
@@ -14,7 +14,7 @@ I'm Akash Kumar, a passionate Web developer with a strong interest in Developmen
 *   **Next.js:** A React framework for building server-side rendered applications.
 *   **Tailwind CSS:** A utility-first CSS framework for rapid UI development.
 *   **TypeScript:** A typed superset of JavaScript.
-*   **[Other relevant technologies, e.g., Framer Motion, etc.]**
+*   **[Other relevant technologies, e.g., Framer Motion, React Hook Form,Lenis,  etc.]**
 
 ## Features
 
@@ -75,7 +75,7 @@ akashkumar9508-akash-portfolio/
 
 ## Contributing
 
-[If you welcome contributions, add instructions here.  Otherwise, you can omit this section.]
+If you welcome contributions, add instructions here.  Otherwise, you can omit this section. 
 
 ## Contact
 
@@ -92,4 +92,4 @@ Feel free to reach out to me via:
 
 ---
 
-Thank you for visiting my portfolio!
+Thank you for visiting my portfolio! I hope you find it informative and enjoyable.
