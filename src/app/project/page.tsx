@@ -2,10 +2,12 @@
 import React from "react";
 import {ThreeDMarqueeDemo} from "@/components/project/ProejctHero"
 import { TextHoverEffectDemo } from "@/components/project/HoverText";
+import Decrepttext from "@/components/project/Decrepttext";
 
 const UnderConstruction = () => {
   return (
     <div>
+      <Decrepttext />
       <TextHoverEffectDemo />
       <ThreeDMarqueeDemo />
       <div className="min-h-[80vh] flex items-center justify-center bg-[--Background] text-[--mainText] px-4 sm:px-8">
