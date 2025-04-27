@@ -16,11 +16,12 @@ export function cursorTrail(props: CursorTrail) {
   const { ref, color } = props;
   const ctx = ref.current?.getContext("2d")!;
   let AnimationFeature = {
-    friction: 0.5,
-    trails: 20,
-    size: 40,
-    dampening: 0.2,
-    tension: 0.98,
+    debug: true,
+      friction: 0.5,
+      trails: 20,
+      size: 50,
+      dampening: 0.25,
+      tension: 0.98,
   };
 
   let cursorPosition = {

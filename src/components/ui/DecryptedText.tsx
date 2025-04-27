@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from "react";
-import { motion, MotionProps } from "framer-motion";
+import { HTMLMotionProps, motion } from "framer-motion";
 
-interface DecryptedTextProps extends React.HTMLAttributes<HTMLSpanElement>, MotionProps {
+interface DecryptedTextProps extends HTMLMotionProps<"span"> {
   text: string;
   speed?: number;
   maxIterations?: number;
